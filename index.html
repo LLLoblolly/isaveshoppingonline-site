@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iSave Shopping — Frugal Living & Money-Saving Deals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7EF;
+    --bg-deep:#F1EBD9;
+    --card:#FFFFFF;
+    --border:#E4DCC4;
+    --forest:#1F4A3C;
+    --forest-deep:#153328;
+    --sage:#5C8B72;
+    --gold:#C9942B;
+    --gold-soft:#E4B457;
+    --coin:#DFF2E6;
+    --text:#22281F;
+    --muted:#6B7261;
+    --font-display:'Fraunces', serif;
+    --font-body:'DM Sans', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:5rem 1.5rem 3.5rem;
+    overflow:hidden;
+    background:linear-gradient(165deg, var(--forest) 0%, var(--forest-deep) 100%);
+    color:#F3F1E4;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:radial-gradient(circle, rgba(228,180,87,0.14) 1.5px, transparent 1.5px);
+    background-size:28px 28px;
+    opacity:0.5;
+  }
+  .eyebrow{
+    position:relative;
+    font-size:0.78rem;
+    font-weight:700;
+    letter-spacing:3.5px;
+    text-transform:uppercase;
+    color:var(--gold-soft);
+    margin-bottom:1.4rem;
+  }
+  .eyebrow::before, .eyebrow::after{content:'◆';font-size:0.5rem;color:var(--sage);margin:0 0.75rem;vertical-align:middle;}
+  h1{
+    position:relative;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:clamp(2.4rem, 6.5vw, 4rem);
+    line-height:1.1;
+  }
+  h1 em{font-style:italic;font-weight:500;color:var(--gold-soft);}
+  .hero p.subtitle{
+    position:relative;
+    max-width:600px;
+    margin:1.6rem auto 2.4rem;
+    color:#D9E4DA;
+    font-size:1.08rem;
+  }
+  .cta-row{position:relative;display:flex;gap:0.9rem;flex-wrap:wrap;justify-content:center;}
+  .cta{
+    display:inline-flex;align-items:center;gap:0.55rem;
+    background:linear-gradient(135deg, var(--gold), #A9761E);
+    color:#1B1204;font-weight:700;font-size:0.96rem;
+    padding:0.95rem 1.8rem;border-radius:999px;text-decoration:none;
+    box-shadow:0 8px 26px rgba(201,148,43,0.3);
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,148,43,0.4);}
+  .cta.secondary{
+    background:rgba(255,255,255,0.08);
+    color:#F3F1E4;
+    border:1px solid rgba(228,180,87,0.35);
+    box-shadow:none;
+  }
+  .cta svg{width:15px;height:15px;}
+
+  main{max-width:1120px;margin:0 auto;padding:0 1.5rem;}
+
+  .category{padding:4.5rem 0 1rem;}
+  .category-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem;}
+  .category-titles .eyebrow-sm{
+    display:block;font-size:0.72rem;font-weight:700;letter-spacing:2.5px;
+    text-transform:uppercase;color:var(--sage);margin-bottom:0.2rem;
+  }
+  .category-titles h2{font-family:var(--font-display);font-weight:600;font-size:1.85rem;color:var(--forest);}
+  .category-rule{flex:1;height:1px;background:var(--border);}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));gap:1.1rem;}
+
+  .card{
+    position:relative;background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:1.5rem;text-decoration:none;color:inherit;display:flex;flex-direction:column;
+    justify-content:space-between;min-height:170px;overflow:hidden;
+    transition:border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sage);opacity:0.7;}
+  .card.gold::before{background:var(--gold);}
+  .card:hover{transform:translateY(-3px);border-color:var(--sage);box-shadow:0 14px 34px rgba(31,74,60,0.1);}
+  .card:hover::before{opacity:1;}
+
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;}
+  .card-title{font-family:var(--font-display);font-weight:600;font-size:1.15rem;}
+  .card-tag{
+    font-size:0.66rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;
+    padding:0.25rem 0.55rem;border-radius:999px;background:var(--coin);color:var(--forest);white-space:nowrap;
+  }
+  .card-tag.soon{background:#F7E3C8;color:#8A5A12;}
+  .card-desc{font-size:0.9rem;color:var(--muted);margin-bottom:1.1rem;}
+  .card-link{font-weight:700;font-size:0.85rem;color:var(--forest);display:flex;align-items:center;gap:0.4rem;}
+  .card:hover .card-link{color:var(--gold);}
+
+  .stat-strip{
+    display:grid;grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:1rem;margin:1rem 0 0.5rem;
+  }
+  .stat{
+    background:var(--coin);border:1px solid var(--border);border-radius:14px;
+    padding:1.2rem 1.3rem;
+  }
+  .stat .num{font-family:var(--font-display);font-size:1.7rem;color:var(--forest);font-weight:600;}
+  .stat .label{font-size:0.8rem;color:var(--muted);margin-top:0.2rem;}
+
+  footer{
+    text-align:center;padding:4rem 1.5rem 2.5rem;color:var(--muted);font-size:0.85rem;
+    border-top:1px solid var(--border);margin-top:3rem;
+  }
+  footer a{color:var(--forest);font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <span class="eyebrow">Frugal Living, Made Simple</span>
+  <h1>Save More.<br>Stress <em>Less.</em></h1>
+  <p class="subtitle">Weekly grocery price comparisons, cashback tools, and everyday money-saving finds — all in one place, updated every week.</p>
+  <div class="cta-row">
+    <a href="isaveshoppingonline-weekly-deals.html" class="cta">
+      See This Week's Best Buys
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </a>
+    <a href="#tools" class="cta secondary">Browse Savings Tools</a>
+  </div>
+</section>
+
+<main>
+
+  <section class="category" id="weekly">
+    <div class="category-head">
+      <div class="category-titles">
+        <span class="eyebrow-sm">Refreshed Every Week</span>
+        <h2>This Week in Groceries</h2>
+      </div>
+      <div class="category-rule"></div>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><div class="num">6</div><div class="label">stores compared: Publix, Food Lion, Harris Teeter, Lidl, Lowe's Foods &amp; Aldi</div></div>
+      <div class="stat"><div class="num">Weekly</div><div class="label">matchups refresh every Wednesday when new store ads drop</div></div>
+      <div class="stat"><div class="num">Protein + Produce</div><div class="label">focused on the categories that move your grocery bill most</div></div>
+    </div>
+    <div class="grid" style="margin-top:1.5rem;">
+      <a href="isaveshoppingonline-weekly-deals.html" class="card gold">
+        <div>
+          <div class="card-top">
+            <span class="card-title">Weekly Best Buys</span>
+            <span class="card-tag">Live Now</span>
+          </div>
+          <p class="card-desc">See which store has the lowest price on chicken, ground beef, produce, and more — plus notable BOGO deals — this week.</p>
+        </div>
+        <span class="card-link">Compare This Week's Deals &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="category" id="tools">
+    <div class="category-head">
+      <div class="category-titles">
+        <span class="eyebrow-sm">Stretch Every Dollar</span>
+        <h2>Savings Tools &amp; Cashback</h2>
+      </div>
+      <div class="category-rule"></div>
+    </div>
+    <div class="grid">
+      <a href="isaveshoppingonline-52-ways-to-save.html" class="card gold">
+        <div>
+          <div class="card-top"><span class="card-title">52 Ways to Save</span><span class="card-tag">Guide</span></div>
+          <p class="card-desc">Safety tips, couponing, browser extensions, card perks, cashback, and bank/HYSA bonuses — 52 tactics, filterable by category.</p>
+        </div>
+        <span class="card-link">Read the Guide &rarr;</span>
+      </a>
+      <a href="isaveshoppingonline-savings-websites.html" class="card">
+        <div>
+          <div class="card-top"><span class="card-title">Savings Websites</span><span class="card-tag">Directory</span></div>
+          <p class="card-desc">A directory of trusted cashback apps, coupon sites, and price-tracking tools.</p>
+        </div>
+        <span class="card-link">Browse Directory &rarr;</span>
+      </a>
+      <a href="https://www.ibotta.com" target="_blank" rel="noopener" class="card">
+        <div>
+          <div class="card-top"><span class="card-title">Grocery Cashback</span><span class="card-tag">Ibotta</span></div>
+          <p class="card-desc">Passive cashback on grocery purchases — scan your receipt, get paid.</p>
+        </div>
+        <span class="card-link">Start Earning &rarr;</span>
+      </a>
+      <a href="https://www.rakuten.com" target="_blank" rel="noopener" class="card">
+        <div>
+          <div class="card-top"><span class="card-title">Shopping Cashback</span><span class="card-tag">Rakuten</span></div>
+          <p class="card-desc">Cashback shopping portal for everyday online retailers.</p>
+        </div>
+        <span class="card-link">Browse Stores &rarr;</span>
+      </a>
+      <a href="https://camelcamelcamel.com" target="_blank" rel="noopener" class="card">
+        <div>
+          <div class="card-top"><span class="card-title">Price Tracking</span><span class="card-tag">CamelCamelCamel</span></div>
+          <p class="card-desc">Track Amazon price history and get alerts when prices drop.</p>
+        </div>
+        <span class="card-link">Track a Price &rarr;</span>
+      </a>
+      <a href="https://www.flipp.com" target="_blank" rel="noopener" class="card gold">
+        <div>
+          <div class="card-top"><span class="card-title">Weekly Ad Browser</span><span class="card-tag">Flipp</span></div>
+          <p class="card-desc">Browse every local store's weekly circular in one app.</p>
+        </div>
+        <span class="card-link">Browse Ads &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="category" id="coming-soon">
+    <div class="category-head">
+      <div class="category-titles">
+        <span class="eyebrow-sm">In the Works</span>
+        <h2>Coming Soon</h2>
+      </div>
+      <div class="category-rule"></div>
+    </div>
+    <div class="grid">
+      <a href="isaveshoppingonline-seasonal-calendar.html" class="card gold">
+        <div>
+          <div class="card-top"><span class="card-title">Seasonal Deal Calendar</span><span class="card-tag">Live Now</span></div>
+          <p class="card-desc">A month-by-month guide to what's cheapest and when to stock up.</p>
+        </div>
+        <span class="card-link">View Calendar &rarr;</span>
+      </a>
+      <a href="#" class="card" style="pointer-events:none;opacity:0.75;">
+        <div>
+          <div class="card-top"><span class="card-title">Seasonal Coupon Matchups</span><span class="card-tag soon">Coming Soon</span></div>
+          <p class="card-desc">Stacked coupon + sale combos for maximum savings.</p>
+        </div>
+        <span class="card-link">Coming Soon</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 iSave Shopping — Part of the Lakyshia D. Godfrey digital universe.</p>
+  <p style="margin-top:0.4rem;"><a href="https://lakyshiadgodfrey.com">lakyshiadgodfrey.com</a></p>
+</footer>
+
+</body>
+</html>

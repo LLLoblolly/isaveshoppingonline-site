@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>52 Ways to Save Money Shopping Online | iSave Shopping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7EF;
+    --bg-deep:#F1EBD9;
+    --card:#FFFFFF;
+    --border:#E4DCC4;
+    --forest:#1F4A3C;
+    --forest-deep:#153328;
+    --sage:#5C8B72;
+    --gold:#C9942B;
+    --gold-soft:#E4B457;
+    --coin:#DFF2E6;
+    --tan:#F7E3C8;
+    --tan-text:#8A5A12;
+    --text:#22281F;
+    --muted:#6B7261;
+    --font-display:'Fraunces', serif;
+    --font-body:'DM Sans', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:2rem;}
+  a{color:inherit;}
+
+  header{
+    background:linear-gradient(160deg, var(--forest) 0%, var(--forest-deep) 100%);
+    color:#F3F1E4;
+    padding:3.5rem 1.5rem 2.5rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:radial-gradient(circle, rgba(228,180,87,0.14) 1.5px, transparent 1.5px);
+    background-size:26px 26px;
+    opacity:0.5;
+  }
+  .eyebrow{position:relative;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1rem;}
+  header h1{position:relative;font-family:var(--font-display);font-weight:600;font-size:clamp(2.1rem, 5.5vw, 3.2rem);}
+  header h1 em{color:var(--gold-soft);font-style:italic;font-weight:500;}
+  header p.sub{position:relative;max-width:600px;margin:1rem auto 0;color:#D9E4DA;font-size:1rem;}
+  .quick-nav{position:relative;display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.75rem;}
+  .quick-nav a{
+    font-size:0.8rem;font-weight:700;letter-spacing:0.02em;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(228,180,87,0.35);
+    color:#F3F1E4;padding:0.55rem 1.1rem;border-radius:999px;text-decoration:none;
+  }
+  .quick-nav a:hover{background:rgba(228,180,87,0.18);}
+  .quick-nav a.gold{background:var(--gold);color:#1B1204;border-color:var(--gold);}
+
+  main{max-width:1140px;margin:0 auto;padding:3rem 1.5rem 1rem;}
+
+  .section-note{color:var(--muted);font-size:0.92rem;margin:0 0 0.5rem;}
+
+  .filter-bar{display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin:1.5rem 0 2rem;}
+  .filter-btn{
+    background:var(--card);border:1px solid var(--border);color:var(--muted);
+    font-family:var(--font-body);font-size:0.78rem;font-weight:700;
+    letter-spacing:0.02em;padding:0.5rem 1rem;border-radius:999px;cursor:pointer;
+    transition:all 0.2s ease;
+  }
+  .filter-btn:hover{border-color:var(--sage);color:var(--forest);}
+  .filter-btn.active{background:var(--forest);color:#F3F1E4;border-color:var(--forest);}
+
+  .tips-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:0.85rem;margin-bottom:1rem;}
+  .tip-card{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:1.1rem 1.25rem;display:flex;gap:0.8rem;
+  }
+  .tip-card.filtered-out{display:none;}
+  .tip-num{
+    font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--gold);
+    flex-shrink:0;min-width:1.8rem;
+  }
+  .tip-body p{font-size:0.9rem;color:var(--text);}
+  .tip-cat{
+    display:inline-block;font-size:0.62rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;padding:0.15rem 0.5rem;border-radius:999px;margin-bottom:0.4rem;
+  }
+  .tip-cat.safety{background:#F7D8D8;color:#8A2E2E;}
+  .tip-cat.coupon{background:var(--coin);color:var(--forest);}
+  .tip-cat.extension{background:#DCE6F7;color:#2E4E8A;}
+  .tip-cat.card{background:var(--tan);color:var(--tan-text);}
+  .tip-cat.cashback{background:#EBDCF7;color:#5E2E8A;}
+  .tip-cat.bank{background:#D8F0E6;color:#1F6B4A;}
+
+  .disclaimer{
+    background:var(--bg-deep);border:1px solid var(--border);border-radius:14px;
+    padding:1.3rem 1.5rem;margin:2.5rem 0;font-size:0.85rem;color:var(--muted);
+  }
+  .disclaimer strong{color:var(--text);}
+
+  footer{
+    max-width:1140px;margin:0 auto;padding:2rem 1.5rem 3rem;color:var(--muted);
+    font-size:0.8rem;border-top:1px solid var(--border);
+  }
+  footer a{color:var(--forest);font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">iSave Shopping · Money-Saving Guide</p>
+  <h1>52 Ways to <em>Save Money</em> Shopping Online</h1>
+  <p class="sub">Real tactics organized into six categories — safety, couponing, browser extensions, card perks, cashback, and bank/HYSA bonuses.</p>
+  <div class="quick-nav">
+    <a href="index.html">Home</a>
+    <a href="isaveshoppingonline-savings-websites.html" class="gold">Popular Savings Websites →</a>
+  </div>
+</header>
+
+<main>
+
+  <p class="section-note">Filter by category, or scroll through all 52.</p>
+
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-filter="all">All 52</button>
+    <button class="filter-btn" data-filter="safety">🔒 Safety</button>
+    <button class="filter-btn" data-filter="coupon">🎟️ Couponing</button>
+    <button class="filter-btn" data-filter="extension">🧩 Extensions</button>
+    <button class="filter-btn" data-filter="card">💳 Card Perks</button>
+    <button class="filter-btn" data-filter="cashback">💵 Cashback</button>
+    <button class="filter-btn" data-filter="bank">🏦 Bank &amp; HYSA</button>
+  </div>
+
+  <div class="tips-grid" id="tipsGrid"></div>
+
+  <div class="disclaimer">
+    <strong>A quick note:</strong> this page is general educational information, not financial advice. Bank bonuses, APYs, card rewards, and account terms mentioned here change often and vary by provider — always confirm current rates, requirements, and fine print directly with the bank, card issuer, or app before opening an account or acting on an offer. Before depositing funds anywhere, confirm the institution is FDIC-insured (banks) or NCUA-insured (credit unions).
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 iSave Shopping · <a href="index.html">Home</a> · <a href="isaveshoppingonline-weekly-deals.html">This Week's Grocery Deals</a> · <a href="isaveshoppingonline-savings-websites.html">Popular Savings Websites</a> · <a href="isaveshoppingonline-seasonal-calendar.html">Seasonal Deal Calendar</a></p>
+</footer>
+
+<script>
+const tips = [
+  // SAFETY (8)
+  { cat:'safety', label:'Safety', text:'Only enter payment info on pages using "https://" with a padlock icon in the address bar.' },
+  { cat:'safety', label:'Safety', text:'Use a credit card instead of a debit card online — credit cards offer stronger fraud protection and don’t pull straight from your bank balance.' },
+  { cat:'safety', label:'Safety', text:'Use a virtual card number (offered by many banks and card issuers) so your real card number is never shared with a retailer.' },
+  { cat:'safety', label:'Safety', text:'Turn on purchase/text alerts for your cards so you catch unauthorized charges the moment they happen.' },
+  { cat:'safety', label:'Safety', text:'Use a unique, strong password for every shopping site — ideally generated and stored in a password manager.' },
+  { cat:'safety', label:'Safety', text:'Check reviews on Trustpilot or the Better Business Bureau before entering payment info on an unfamiliar site.' },
+  { cat:'safety', label:'Safety', text:'Avoid entering card info over public Wi-Fi without a VPN.' },
+  { cat:'safety', label:'Safety', text:'Review your card and bank statements weekly instead of waiting for the monthly statement to catch problems early.' },
+
+  // COUPONING (9)
+  { cat:'coupon', label:'Couponing', text:'Search "[store name] coupon code" before checking out — it often surfaces a working promo instantly.' },
+  { cat:'coupon', label:'Couponing', text:'Stack a manufacturer coupon, a store coupon, and a cashback portal on the same purchase when the retailer’s policy allows it.' },
+  { cat:'coupon', label:'Couponing', text:'Join store loyalty/rewards programs before you shop — most are free and unlock member-only prices instantly.' },
+  { cat:'coupon', label:'Couponing', text:'Check retailer apps for digital coupons that clip straight to your loyalty account — common at grocery chains.' },
+  { cat:'coupon', label:'Couponing', text:'Time big purchases around known sale cycles — end-of-season clearance and major holiday weekends have the deepest discounts.' },
+  { cat:'coupon', label:'Couponing', text:'Check a product’s price history before buying so you know if a "sale" price is actually a good one.' },
+  { cat:'coupon', label:'Couponing', text:'Follow crowdsourced deal communities that verify working discount codes in real time.' },
+  { cat:'coupon', label:'Couponing', text:'Look for student, military, first-responder, or teacher discounts — many retailers offer 10-15% off through ID verification services.' },
+  { cat:'coupon', label:'Couponing', text:'Add items to a cart and step away for a day — some retailers email a discount code to bring you back.' },
+
+  // EXTENSIONS (8)
+  { cat:'extension', label:'Extensions', text:'Install a coupon-finder extension that automatically tests codes at checkout so you never miss a discount.' },
+  { cat:'extension', label:'Extensions', text:'Use a cashback browser extension that activates automatically when you land on a partner retailer’s site.' },
+  { cat:'extension', label:'Extensions', text:'Add a price-comparison extension that flags when the same item is cheaper elsewhere before you buy.' },
+  { cat:'extension', label:'Extensions', text:'Use a price-history extension on Amazon to see a chart of past prices directly on the product page.' },
+  { cat:'extension', label:'Extensions', text:'Check whether your everyday search engine has a built-in rewards program that pays points for searching and shopping through it.' },
+  { cat:'extension', label:'Extensions', text:'Use your card issuer’s own shopping portal or extension — many add bonus cashback on top of your card’s usual rewards.' },
+  { cat:'extension', label:'Extensions', text:'Keep browser extensions to a trusted few and remove ones you don’t recognize — malicious "coupon" extensions can track browsing or hijack affiliate links.' },
+  { cat:'extension', label:'Extensions', text:'Set your browser to ask before autofilling saved payment info on unfamiliar sites.' },
+
+  // CARD PERKS (9)
+  { cat:'card', label:'Card Perks', text:'Check if your credit card offers purchase protection — reimbursement if a new purchase is damaged or stolen within a set window.' },
+  { cat:'card', label:'Card Perks', text:'Check for extended warranty coverage — many cards automatically add a year to a manufacturer’s warranty on eligible purchases.' },
+  { cat:'card', label:'Card Perks', text:'Look into price protection — some cards refund the difference if an item you bought drops in price shortly after.' },
+  { cat:'card', label:'Card Perks', text:'Use a card with rotating or category-specific bonus cashback and match your spending to whichever category is active.' },
+  { cat:'card', label:'Card Perks', text:'Check for return protection, which reimburses you if a retailer won’t accept a return within its window.' },
+  { cat:'card', label:'Card Perks', text:'Redeem points through your issuer’s travel or shopping portal when it offers bonus value over a flat statement credit.' },
+  { cat:'card', label:'Card Perks', text:'Use a card that waives foreign transaction fees if you shop from international retailers.' },
+  { cat:'card', label:'Card Perks', text:'Pay your statement in full every month — carrying a balance erases any cashback value with interest charges.' },
+  { cat:'card', label:'Card Perks', text:'Review your card’s benefits guide once a year — issuers add and change perks often, and it’s easy to miss ones you’re already paying for.' },
+
+  // CASHBACK (9)
+  { cat:'cashback', label:'Cashback', text:'Stack a cashback shopping portal with your credit card’s own cashback for the same purchase when the retailer allows it.' },
+  { cat:'cashback', label:'Cashback', text:'Use a receipt-scanning app to earn cashback on groceries you’re already buying, regardless of where you shop.' },
+  { cat:'cashback', label:'Cashback', text:'Check if your existing checking account already has a built-in debit card cashback or rewards program.' },
+  { cat:'cashback', label:'Cashback', text:'Use a browser-linked cashback account so purchases track automatically without remembering to click through a portal first.' },
+  { cat:'cashback', label:'Cashback', text:'Redeem cashback as cash via PayPal or direct deposit rather than gift cards when possible, for full value and flexibility.' },
+  { cat:'cashback', label:'Cashback', text:'Watch for sign-up bonuses on cashback apps — many pay a one-time bonus after your first qualifying purchase.' },
+  { cat:'cashback', label:'Cashback', text:'Link a card to a card-linked offers program (common with major banks) for automatic statement credits at select merchants.' },
+  { cat:'cashback', label:'Cashback', text:'Compare a few cashback portals before a big purchase — the percentage back on the same retailer can vary between them.' },
+  { cat:'cashback', label:'Cashback', text:'Set a monthly reminder to redeem accumulated cashback — some programs have expiration policies or minimum payout thresholds.' },
+
+  // BANK & HYSA (9)
+  { cat:'bank', label:'Bank & HYSA', text:'Compare high-yield savings account (HYSA) rates before parking extra cash — online banks typically pay meaningfully more than traditional brick-and-mortar savings accounts. Rates change often, so check current numbers directly with providers or a comparison site.' },
+  { cat:'bank', label:'Bank & HYSA', text:'Confirm any bank is FDIC-insured or any credit union is NCUA-insured before depositing funds, to protect your deposit up to the insured limit.' },
+  { cat:'bank', label:'Bank & HYSA', text:'Watch for bank account opening bonuses — they typically require a minimum deposit and a qualifying direct deposit within a set window, so read the fine print carefully.' },
+  { cat:'bank', label:'Bank & HYSA', text:'Consider a separate HYSA specifically for a savings goal (emergency fund, taxes, a big purchase) so it doesn’t mix with everyday spending.' },
+  { cat:'bank', label:'Bank & HYSA', text:'Check whether a HYSA has monthly fees or balance minimums that could offset the interest you’re earning.' },
+  { cat:'bank', label:'Bank & HYSA', text:'Set up an automatic transfer into your HYSA on payday so saving happens before you have a chance to spend it.' },
+  { cat:'bank', label:'Bank & HYSA', text:'If you’re chasing multiple bank bonuses, track each account’s requirements and deadlines — missing a direct deposit window is the most common way people forfeit a bonus.' },
+  { cat:'bank', label:'Bank & HYSA', text:'Ask whether closing an account early claws back its bonus — many banks require the account to stay open a minimum number of months.' },
+  { cat:'bank', label:'Bank & HYSA', text:'Recheck your HYSA’s interest rate at least twice a year — rates move with broader interest-rate trends, so today’s best rate may not be the best rate in six months.' },
+];
+
+function renderTips(){
+  document.getElementById('tipsGrid').innerHTML = tips.map((t, idx) => `
+    <div class="tip-card" data-cat="${t.cat}">
+      <span class="tip-num">${idx + 1}</span>
+      <div class="tip-body">
+        <span class="tip-cat ${t.cat}">${t.label}</span>
+        <p>${t.text}</p>
+      </div>
+    </div>
+  `).join('');
+}
+renderTips();
+
+document.getElementById('filterBar').addEventListener('click', e => {
+  if(!e.target.classList.contains('filter-btn')) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === e.target));
+  const filter = e.target.dataset.filter;
+  document.querySelectorAll('.tip-card').forEach(card => {
+    card.classList.toggle('filtered-out', filter !== 'all' && card.dataset.cat !== filter);
+  });
+});
+</script>
+
+</body>
+</html>

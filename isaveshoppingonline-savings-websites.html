@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popular Savings Websites | iSave Shopping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7EF;
+    --bg-deep:#F1EBD9;
+    --card:#FFFFFF;
+    --border:#E4DCC4;
+    --forest:#1F4A3C;
+    --forest-deep:#153328;
+    --sage:#5C8B72;
+    --gold:#C9942B;
+    --gold-soft:#E4B457;
+    --text:#22281F;
+    --muted:#6B7261;
+    --font-display:'Fraunces', serif;
+    --font-body:'DM Sans', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:2rem;}
+  a{color:inherit;}
+
+  header{
+    background:linear-gradient(160deg, var(--forest) 0%, var(--forest-deep) 100%);
+    color:#F3F1E4;
+    padding:3.5rem 1.5rem 2.5rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:radial-gradient(circle, rgba(228,180,87,0.14) 1.5px, transparent 1.5px);
+    background-size:26px 26px;
+    opacity:0.5;
+  }
+  .eyebrow{position:relative;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1rem;}
+  header h1{position:relative;font-family:var(--font-display);font-weight:600;font-size:clamp(2.1rem, 5.5vw, 3.2rem);}
+  header h1 em{color:var(--gold-soft);font-style:italic;font-weight:500;}
+  header p.sub{position:relative;max-width:600px;margin:1rem auto 0;color:#D9E4DA;font-size:1rem;}
+  .quick-nav{position:relative;display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.75rem;}
+  .quick-nav a{
+    font-size:0.8rem;font-weight:700;letter-spacing:0.02em;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(228,180,87,0.35);
+    color:#F3F1E4;padding:0.55rem 1.1rem;border-radius:999px;text-decoration:none;
+  }
+  .quick-nav a:hover{background:rgba(228,180,87,0.18);}
+  .quick-nav a.gold{background:var(--gold);color:#1B1204;border-color:var(--gold);}
+
+  main{max-width:1140px;margin:0 auto;padding:3rem 1.5rem 1rem;}
+
+  .section-note{color:var(--muted);font-size:0.92rem;margin:0 0 2rem;max-width:680px;}
+
+  .dir-group{margin-bottom:2.4rem;}
+  .dir-group h3{
+    font-family:var(--font-display);font-size:1.2rem;color:var(--forest);
+    margin-bottom:1rem;font-weight:600;
+  }
+  .dir-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));gap:0.9rem;}
+  .dir-card{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:1.1rem 1.25rem;text-decoration:none;color:inherit;
+    display:flex;flex-direction:column;gap:0.3rem;
+    transition:transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .dir-card:hover{transform:translateY(-2px);border-color:var(--sage);box-shadow:0 10px 26px rgba(31,74,60,0.1);}
+  .dir-card .name{font-weight:700;font-size:0.98rem;color:var(--forest);}
+  .dir-card .desc{font-size:0.83rem;color:var(--muted);}
+
+  footer{
+    max-width:1140px;margin:0 auto;padding:2rem 1.5rem 3rem;color:var(--muted);
+    font-size:0.8rem;border-top:1px solid var(--border);
+  }
+  footer a{color:var(--forest);font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">iSave Shopping · Resource Directory</p>
+  <h1>Popular <em>Savings Websites</em></h1>
+  <p class="sub">A curated directory of cashback apps, coupon sites, and price-tracking tools worth having in your rotation.</p>
+  <div class="quick-nav">
+    <a href="index.html">Home</a>
+    <a href="isaveshoppingonline-52-ways-to-save.html" class="gold">52 Ways to Save →</a>
+  </div>
+</header>
+
+<main>
+
+  <p class="section-note">These are general-purpose tools that work across most online and in-store shopping — not specific to any one store or category. Sign up is free for all of them.</p>
+
+  <div class="dir-group">
+    <h3>Cashback Apps &amp; Portals</h3>
+    <div class="dir-grid" id="cashbackGrid"></div>
+  </div>
+
+  <div class="dir-group">
+    <h3>Coupon &amp; Deal Sites</h3>
+    <div class="dir-grid" id="couponGrid"></div>
+  </div>
+
+  <div class="dir-group">
+    <h3>Price Tracking Tools</h3>
+    <div class="dir-grid" id="priceGrid"></div>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 iSave Shopping · <a href="index.html">Home</a> · <a href="isaveshoppingonline-weekly-deals.html">This Week's Grocery Deals</a> · <a href="isaveshoppingonline-52-ways-to-save.html">52 Ways to Save</a> · <a href="isaveshoppingonline-seasonal-calendar.html">Seasonal Deal Calendar</a></p>
+</footer>
+
+<script>
+const cashbackSites = [
+  { name:'Ibotta', url:'https://www.ibotta.com', desc:'Passive grocery cashback — scan receipts, get paid.' },
+  { name:'Rakuten', url:'https://www.rakuten.com', desc:'Cashback shopping portal for thousands of online retailers.' },
+  { name:'TopCashback', url:'https://www.topcashback.com', desc:'High cashback rates, often the top payer for a given store.' },
+  { name:'BeFrugal', url:'https://www.befrugal.com', desc:'Cashback shopping portal with coupon codes built in.' },
+  { name:'Dosh', url:'https://www.dosh.cash', desc:'Link a card once, earn cashback automatically — no clicking through links.' },
+  { name:'Drop', url:'https://www.drop.com', desc:'Passive rewards from linked cards at partner merchants.' },
+  { name:'Fetch Rewards', url:'https://fetchrewards.com', desc:'Scan any receipt from any store to earn points for gift cards.' },
+  { name:'PayPal Honey', url:'https://www.joinhoney.com', desc:'Browser extension that auto-applies coupon codes and finds cashback.' },
+  { name:'Capital One Shopping', url:'https://capitaloneshopping.com', desc:'Browser extension for coupons, price drops, and cashback — no Capital One card required.' },
+  { name:'Upside', url:'https://www.upside.com', desc:'Cashback on gas, groceries, and dining at participating locations.' },
+  { name:'Shopkick', url:'https://www.shopkick.com', desc:'Earn points just for walking into partner stores, plus for purchases.' },
+  { name:'Receipt Hog', url:'https://www.receipthog.com', desc:'Upload any receipt for coins redeemable for cash.' },
+];
+
+const couponSites = [
+  { name:'Coupons.com', url:'https://www.coupons.com', desc:'Printable and digital coupons across nearly every category.' },
+  { name:'Slickdeals', url:'https://slickdeals.net', desc:'Crowdsourced hot deals, posted and voted on by real shoppers 24/7.' },
+  { name:'RetailMeNot', url:'https://www.retailmenot.com', desc:'Promo codes and cashback offers at thousands of stores.' },
+  { name:'Hip2Save', url:'https://hip2save.com', desc:'Coupon matchups, freebies, and store-specific deal breakdowns.' },
+  { name:'The Krazy Coupon Lady', url:'https://thekrazycouponlady.com', desc:'Beginner-friendly couponing guides and store matchups.' },
+  { name:"Brad's Deals", url:'https://www.bradsdeals.com', desc:'Handpicked deals and exclusive discount codes.' },
+  { name:'Flipp', url:'https://www.flipp.com', desc:'Browse every local store’s weekly ad circular in one place.' },
+  { name:'Groupon', url:'https://www.groupon.com', desc:'Local deals on restaurants, activities, and services.' },
+];
+
+const priceSites = [
+  { name:'CamelCamelCamel', url:'https://camelcamelcamel.com', desc:'Free Amazon price history tracking and price-drop alerts.' },
+  { name:'Keepa', url:'https://keepa.com', desc:'Advanced Amazon price history charts, right on the product page via its extension.' },
+];
+
+function renderDir(gridId, items){
+  document.getElementById(gridId).innerHTML = items.map(i => `
+    <a href="${i.url}" target="_blank" rel="noopener" class="dir-card">
+      <span class="name">${i.name}</span>
+      <span class="desc">${i.desc}</span>
+    </a>
+  `).join('');
+}
+renderDir('cashbackGrid', cashbackSites);
+renderDir('couponGrid', couponSites);
+renderDir('priceGrid', priceSites);
+</script>
+
+</body>
+</html>

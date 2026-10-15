@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Month-by-Month Stock-Up Guide | iSave Shopping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7EF;
+    --bg-deep:#F1EBD9;
+    --card:#FFFFFF;
+    --border:#E4DCC4;
+    --forest:#1F4A3C;
+    --forest-deep:#153328;
+    --sage:#5C8B72;
+    --gold:#C9942B;
+    --gold-soft:#E4B457;
+    --coin:#DFF2E6;
+    --tan:#F7E3C8;
+    --tan-text:#8A5A12;
+    --text:#22281F;
+    --muted:#6B7261;
+    --font-display:'Fraunces', serif;
+    --font-body:'DM Sans', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:2rem;}
+  a{color:inherit;}
+
+  header{
+    background:linear-gradient(160deg, var(--forest) 0%, var(--forest-deep) 100%);
+    color:#F3F1E4;
+    padding:3.5rem 1.5rem 2.5rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:radial-gradient(circle, rgba(228,180,87,0.14) 1.5px, transparent 1.5px);
+    background-size:26px 26px;
+    opacity:0.5;
+  }
+  .eyebrow{position:relative;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1rem;}
+  header h1{position:relative;font-family:var(--font-display);font-weight:600;font-size:clamp(2.1rem, 5.5vw, 3.2rem);}
+  header h1 em{color:var(--gold-soft);font-style:italic;font-weight:500;}
+  header p.sub{position:relative;max-width:600px;margin:1rem auto 0;color:#D9E4DA;font-size:1rem;}
+  .quick-nav{position:relative;display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.75rem;}
+  .quick-nav a{
+    font-size:0.8rem;font-weight:700;letter-spacing:0.02em;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(228,180,87,0.35);
+    color:#F3F1E4;padding:0.55rem 1.1rem;border-radius:999px;text-decoration:none;
+  }
+  .quick-nav a:hover{background:rgba(228,180,87,0.18);}
+  .quick-nav a.gold{background:var(--gold);color:#1B1204;border-color:var(--gold);}
+
+  main{max-width:1140px;margin:0 auto;padding:3rem 1.5rem 1rem;}
+
+  .section-note{color:var(--muted);font-size:0.92rem;margin:0 0 2rem;max-width:680px;}
+
+  .months-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:1rem;}
+
+  .month-card{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:1.4rem 1.5rem;position:relative;overflow:hidden;
+  }
+  .month-card.current{border-color:var(--gold);box-shadow:0 0 0 2px rgba(201,148,43,0.25);}
+  .month-card.current::before{
+    content:'This Month';
+    position:absolute;top:0;right:0;
+    background:var(--gold);color:#1B1204;
+    font-size:0.62rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
+    padding:0.3rem 0.7rem;border-radius:0 0 0 10px;
+  }
+  .month-name{
+    font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--forest);
+    margin-bottom:0.9rem;
+  }
+  .month-block{margin-bottom:0.8rem;}
+  .month-block:last-of-type{margin-bottom:0.6rem;}
+  .month-block .label{
+    display:inline-block;font-size:0.66rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.05em;padding:0.15rem 0.5rem;border-radius:999px;margin-bottom:0.4rem;
+  }
+  .month-block.buy .label{background:var(--tan);color:var(--tan-text);}
+  .month-block.grocery .label{background:var(--coin);color:var(--forest);}
+  .month-block p{font-size:0.87rem;color:var(--text);}
+
+  .sources{font-size:0.72rem;color:var(--muted);margin-top:0.5rem;}
+  .sources a{color:var(--sage);text-decoration:none;font-weight:600;}
+  .sources a:hover{text-decoration:underline;}
+
+  .disclaimer{
+    background:var(--bg-deep);border:1px solid var(--border);border-radius:14px;
+    padding:1.3rem 1.5rem;margin:2.5rem 0 1rem;font-size:0.85rem;color:var(--muted);
+  }
+  .disclaimer strong{color:var(--text);}
+
+  footer{
+    max-width:1140px;margin:0 auto;padding:2rem 1.5rem 3rem;color:var(--muted);
+    font-size:0.8rem;border-top:1px solid var(--border);
+  }
+  footer a{color:var(--forest);font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">iSave Shopping · Seasonal Guide</p>
+  <h1>Month-by-Month <em>Stock-Up Guide</em></h1>
+  <p class="sub">What's historically cheapest each month — for big purchases and for the pantry — so you can plan ahead instead of buying at full price.</p>
+  <div class="quick-nav">
+    <a href="index.html">Home</a>
+    <a href="isaveshoppingonline-weekly-deals.html">This Week's Grocery Deals</a>
+    <a href="isaveshoppingonline-52-ways-to-save.html" class="gold">52 Ways to Save →</a>
+  </div>
+</header>
+
+<main>
+
+  <p class="section-note">This is a general historical pattern guide, not a live price feed — actual sales vary by year, retailer, and region. Your current month is highlighted below.</p>
+
+  <div class="months-grid" id="monthsGrid"></div>
+
+  <div class="disclaimer">
+    <strong>A quick note:</strong> these are historical buying patterns compiled from consumer-savings publications, not a guarantee of any specific sale in any specific year. Always compare the current price against a price-history tool before assuming a "seasonal low" is actually live right now.
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 iSave Shopping · <a href="index.html">Home</a> · <a href="isaveshoppingonline-weekly-deals.html">This Week's Grocery Deals</a> · <a href="isaveshoppingonline-52-ways-to-save.html">52 Ways to Save</a> · <a href="isaveshoppingonline-savings-websites.html">Popular Savings Websites</a></p>
+</footer>
+
+<script>
+const months = [
+  { name:'January', buy:'Fitness equipment, TVs, home organization, linens, and cold/flu medications.', grocery:'Diet foods, oatmeal, and healthy soups.',
+    sources:[['1','https://www.timesunion.com/shopportunist/article/month-by-month-shopping-guide-sales-cycles-21307100.php'],['2','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/']] },
+  { name:'February', buy:'Winter apparel, furniture, and major home appliances.', grocery:"Post-Valentine's Day discounted chocolates and sweet treats.",
+    sources:[['1','https://www.cbs19.tv/article/news/local/cbs19-this-morning/when-to-buy-what-a-month-by-month-guide/501-261420775'],['2','https://money.com/month-guide-best-time-buy-everything/'],['3','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/']] },
+  { name:'March', buy:'Vacuum cleaners, non-Apple smartphones, and running shoes.', grocery:'Frozen foods (vegetables, meals, and snacks) during National Frozen Food Month, plus cleaning supplies.',
+    sources:[['1','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['2','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/'],['3','https://money.com/month-guide-best-time-buy-everything/'],['4','https://joyfullythriving.com/seasonal-sale-cycles-a-monthly-guide-with-free-printable/']] },
+  { name:'April', buy:'Home and garden supplies, lawn mowers, and tools.', grocery:'Spring produce (asparagus, spinach) and leftover Easter baking items (evaporated milk, candy).',
+    sources:[['1','https://www.youtube.com/watch?v=YB6HnsirraI&t=103'],['2','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['3','https://money.com/month-guide-best-time-buy-everything/']] },
+  { name:'May', buy:'Outdoor grills, patio furniture, and spring clothing clearance.', grocery:'Memorial Day barbecue essentials like condiments, BBQ sauce, pickles, and chips.',
+    sources:[['1','https://www.nerdwallet.com/finance/learn/what-to-buy-every-month'],['2','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['3','https://joyfullythriving.com/seasonal-sale-cycles-a-monthly-guide-with-free-printable/'],['4','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/']] },
+  { name:'June', buy:'Tools, home improvement materials, and smartwatches.', grocery:'Dairy items and ice cream for National Dairy Month.',
+    sources:[['1','https://money.com/month-guide-best-time-buy-everything/'],['2','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['3','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/']] },
+  { name:'July', buy:'Clothes dryers, dishwashers, and summer clothing clearance.', grocery:'Grilling meats, blueberries, watermelon, and early school-supply inventory.',
+    sources:[['1','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['2','https://www.nerdwallet.com/finance/learn/what-to-buy-every-month'],['3','https://joyfullythriving.com/seasonal-sale-cycles-a-monthly-guide-with-free-printable/'],['4','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/']] },
+  { name:'August', buy:'Laptops, tablets, printers, and school supplies.', grocery:'Tissues and disinfecting wipes during back-to-school promotions.',
+    sources:[['1','https://www.nerdwallet.com/finance/learn/what-to-buy-every-month'],['2','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['3','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/']] },
+  { name:'September', buy:'Ranges, dishwashers, and lawn mowers.', grocery:'Cereal, peanut butter, spaghetti sauce, and canned goods for National Coupon Month.',
+    sources:[['1','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['2','https://joyfullythriving.com/seasonal-sale-cycles-a-monthly-guide-with-free-printable/']] },
+  { name:'October', buy:'Snow blowers, interior paint, and gardening bulbs.', grocery:'Halloween candy and early baking staples.',
+    sources:[['1','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/'],['2','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything']] },
+  { name:'November', buy:'TVs, smartwatches, cameras, headphones, and vacuum cleaners (Black Friday deals).', grocery:'Baking supplies (flour, sugar), canned pumpkin, gravy, broth, and crackers.',
+    sources:[['1','https://www.5dollardinners.com/seasonal-stockpiling-what-to-buy-when-at-the-grocery-store/'],['2','https://www.neamb.com/shopping-discounts/the-best-times-to-buy-just-about-anything'],['3','https://joyfullythriving.com/seasonal-sale-cycles-a-monthly-guide-with-free-printable/']] },
+  { name:'December', buy:'Digital cameras, electronics, and tools (remaining holiday sales).', grocery:'Holiday baking ingredients, roasting meats, and festive dinner supplies.',
+    sources:[] },
+];
+
+const currentMonthName = new Date().toLocaleString('en-US', { month: 'long' });
+
+function renderMonths(){
+  document.getElementById('monthsGrid').innerHTML = months.map(m => `
+    <div class="month-card ${m.name === currentMonthName ? 'current' : ''}">
+      <div class="month-name">${m.name}</div>
+      <div class="month-block buy">
+        <span class="label">What to Buy</span>
+        <p>${m.buy}</p>
+      </div>
+      <div class="month-block grocery">
+        <span class="label">Groceries to Stock Up On</span>
+        <p>${m.grocery}</p>
+      </div>
+      ${m.sources.length ? `<div class="sources">Sources: ${m.sources.map(s => `<a href="${s[1]}" target="_blank" rel="noopener">[${s[0]}]</a>`).join(' ')}</div>` : ''}
+    </div>
+  `).join('');
+}
+renderMonths();
+</script>
+
+</body>
+</html>
