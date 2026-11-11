@@ -273,7 +273,7 @@
   <p class="eyebrow">iSave Shopping · Frugal Living</p>
   <h1>This Week's <em>Best Grocery Buys</em></h1>
   <p class="sub">A store-by-store comparison of the best protein, produce, beverage &amp; BOGO prices this week — so you know exactly where to shop before you go.</p>
-  <div class="updated-pill">📅 Deals valid <strong id="dateRange">Nov 4 – 10, 2026</strong> · Updated weekly</div>
+  <div class="updated-pill">📅 Deals valid <strong id="dateRange">Nov 11 – 17, 2026</strong> · Updated weekly</div>
 </header>
 
 <div class="search-wrap">
@@ -331,7 +331,7 @@
 </main>
 
 <footer>
-  <p>Deals for the ad week of Nov 4 – 10, 2026 (Publix: Nov 5 – 11 in some areas), compiled from <a href="https://www.iheartpublix.com/2026/11/publix-super-deals-week-of-11-5-to-11-11-11-4-to-11-10-for-some/" target="_blank" rel="noopener">iHeartPublix</a>, <a href="https://www.aldireviewer.com/this-week-at-aldi-the-aldi-weekly-ad-for-november-4-2026/" target="_blank" rel="noopener">Aldi Reviewer</a>, <a href="https://weeklyadhunters.com/aldi-weekly-ad/" target="_blank" rel="noopener">Weekly Ad Hunters (Aldi, Piggly Wiggly)</a>, and <a href="https://retailbrandsinsider.substack.com/p/lidl-us-unveils-2026-thanksgiving" target="_blank" rel="noopener">Retail Brands Insider (Lidl Thanksgiving)</a>. Prices marked “preview” come from early-ad sites and aren’t confirmed by the store. Food Lion, Harris Teeter, Lowe’s Foods, and Lidl weekly ads weren’t available through public sources at press time. Prices and availability vary by location — always confirm at your local store.</p>
+  <p>Deals for the ad week of Nov 11 – 17, 2026 (Publix: Nov 12 – 18 in some areas), compiled from <a href="https://www.iheartpublix.com/2026/11/publix-super-deals-week-of-11-12-to-11-18-11-11-to-11-17-for-some/" target="_blank" rel="noopener">iHeartPublix</a>, <a href="https://www.aldireviewer.com/this-week-at-aldi-the-aldi-weekly-ad-for-november-11-2026/" target="_blank" rel="noopener">Aldi Reviewer</a>, <a href="https://weeklyadhunters.com/aldi-weekly-ad/" target="_blank" rel="noopener">Weekly Ad Hunters (Aldi)</a>, <a href="https://www.lidl.com/c/thanksgiving-meal-deal/a10104844" target="_blank" rel="noopener">Lidl</a>, and <a href="https://parade.com/food/aldi-just-revealed-its-2026-thanksgiving-meal-deal-and-it-feeds-10-people-for-under-39" target="_blank" rel="noopener">Parade (Aldi Thanksgiving)</a>. Prices marked “preview” come from early-ad sites and aren’t confirmed by the store. Food Lion, Harris Teeter, Lowe’s Foods, and Piggly Wiggly weekly ads weren’t available through public sources at press time. Prices and availability vary by location — always confirm at your local store.</p>
   <p>&copy; 2026 iSave Shopping · <a href="index.html">Home</a> · <a href="isaveshoppingonline-52-ways-to-save.html">52 Ways to Save</a> · <a href="isaveshoppingonline-savings-websites.html">Popular Savings Websites</a> · <a href="isaveshoppingonline-seasonal-calendar.html">Seasonal Deal Calendar</a></p>
 </footer>
 
@@ -339,8 +339,8 @@
 // ============ DATA ============
 // Cross-store comparison: items on sale at 2+ stores this week
 const winners = [
-  { item:'Boneless chicken breast', cat:'protein', prices:{ 'Publix':'BOGO, 4lb+ pack (net ≈$2.78/lb)', 'Aldi':'$1.99/lb family pack (preview)' }, winner:['Aldi'] },
-  { item:'Ground beef', cat:'protein', prices:{ 'Aldi':'≈$2.99/lb chub (preview)', 'Piggly Wiggly':'$4.99/lb, 85% lean (preview)' }, winner:['Aldi'] },
+  { item:'Thanksgiving meal for 10', cat:'protein', prices:{ 'Lidl':'≈$35.86 basket, 14lb turkey (Lidl Plus app, Nov 11–25)', 'Aldi':'under $39, 16lb turkey (through Nov 25)' }, winner:['Lidl'] },
+  { item:'Boneless chicken breast', cat:'protein', prices:{ 'Publix':'Just Bare 18oz BOGO $8.50 (net ≈$3.78/lb)', 'Aldi':'$1.69/lb (Tyson)' }, winner:['Aldi'] },
 ];
 
 const stores = ['Publix','Food Lion','Harris Teeter','Lidl','Lowe’s Foods','Aldi','Piggly Wiggly'];
@@ -348,14 +348,13 @@ const stores = ['Publix','Food Lion','Harris Teeter','Lidl','Lowe’s Foods','Al
 // Store-specific highlights (no direct cross-store match this week)
 const highlights = [
   { store:'Publix', items:[
-    { name:'Publix chicken drumsticks', price:'$1.99/lb' },
-    { name:'Texas Meat Co. beef birria (BOGO net)', price:'≈$7.50' },
-    { name:'Hatfield bacon (BOGO net)', price:'≈$5.00–6.00' },
-    { name:'Gold kiwi (BOGO net)', price:'≈$3.50' },
-    { name:'Blueberries, 11oz', price:'2 for $10' },
+    { name:'Whole young turkey', price:'$1.99/lb' },
+    { name:'Turkey breast with ribs (BOGO)', price:'$4.59/lb' },
+    { name:'Fresh cranberries, 12oz', price:'2 for $4' },
+    { name:'Publix spinach', price:'$1.99' },
     { name:'Gold potatoes, 5lb', price:'$4.99' },
-    { name:'Baby-cut carrots', price:'2 for $3' },
-    { name:'Community Coffee K-Cups or ground (BOGO net)', price:'≈$5.90–7.10' },
+    { name:'Smoked ham', price:'$2.59/lb' },
+    { name:'Johnsonville sausage', price:'$3.99' },
   ]},
   { store:'Food Lion', items:[
     { name:'This week’s ad wasn’t available from public sources — check the Food Lion app', price:'—' },
@@ -364,42 +363,40 @@ const highlights = [
     { name:'This week’s ad wasn’t available from public sources — check harristeeter.com', price:'—' },
   ]},
   { store:'Lidl', items:[
-    { name:'Thanksgiving dinner for up to 10, Nov 11–25 (Lidl Plus app)', price:'$35.86' },
-    { name:'This week’s regular ad not confirmed — check the Lidl Plus app', price:'—' },
+    { name:'Thanksgiving basket for 10 — 21 items incl. 14lb turkey (Lidl Plus, Nov 11–25)', price:'≈$35.86' },
+    { name:'Price-matches the Walmart and Aldi Thanksgiving baskets', price:'—' },
   ]},
   { store:'Lowe’s Foods', items:[
     { name:'This week’s ad wasn’t available from public sources — check shop.lowesfoods.com', price:'—' },
   ]},
   { store:'Aldi', items:[
-    { name:'Avocados (preview)', price:'$0.49 ea' },
-    { name:'Washington Bartlett pears, 3lb bag (preview)', price:'$2.99' },
-    { name:'Chicken tenderloins (preview)', price:'$2.09/lb' },
-    { name:'Sirloin tip roast (preview)', price:'$7.49/lb' },
-    { name:'Organic grass-fed 85/15 ground beef (preview)', price:'$5.99' },
+    { name:'Boneless skinless chicken thighs, family pack', price:'$2.49/lb' },
+    { name:'Buffalo party-pack chicken wings, 40oz', price:'$4.99' },
+    { name:'USDA Choice beef tenderloin', price:'$12.99/lb' },
+    { name:'Half pork loin (preview)', price:'$2.09/lb' },
+    { name:'Cherub grape tomatoes (preview)', price:'$1.99' },
   ]},
   { store:'Piggly Wiggly', items:[
-    { name:'Honeycrisp apples (preview)', price:'$1.49/lb' },
-    { name:'Progresso / Old El Paso broth or soup (preview)', price:'4 for $6' },
-    { name:'Knorr pasta or rice sides (preview)', price:'4 for $5' },
+    { name:'This week’s ad wasn’t available from public sources — Moncks Corner store: (843) 761-8610', price:'—' },
   ]},
 ];
 
 const bogoHighlights = [
-  { store:'Publix', items:['Publix boneless skinless chicken breasts, 4lb+ — BOGO $5.55/lb','Texas Meat Co. beef birria — BOGO $14.99','Texas Meat Co. fajita beef — BOGO','Hatfield bacon — BOGO $9.99–11.99','Gold kiwi — BOGO $6.99','Tropical avocado — BOGO','Community Coffee K-Cups or ground — BOGO $11.79–14.19','Clearly Canadian sparkling water, 11oz — BOGO','Publix shredded cheese, 6–8oz — BOGO','Pillsbury Toaster Strudel or Scrambles — BOGO $5.36'] },
+  { store:'Publix', items:['Joseph’s pita bread, 11oz — BOGO $2.79','Publix hummus, 10oz — BOGO $3.99','Just Bare chicken breast fillets, 18oz — BOGO $8.50','Rosina meatballs — BOGO $12.49','Progresso or Old El Paso soup — BOGO $3.86 (≈$1.68 ea w/ coupon)','Annie’s mac & cheese — BOGO $2.69 w/ digital coupon','Vital Farms eggs — BOGO $11.29','Publix salsa, 16oz — Buy 2 Get 1'] },
   { store:'Food Lion', items:['This week’s BOGO list wasn’t available from public sources'] },
   { store:'Harris Teeter', items:['This week’s BOGO list wasn’t available from public sources'] },
   { store:'Lowe’s Foods', items:['This week’s BOGO list wasn’t available from public sources'] },
-  { store:'Lidl', items:['No BOGO deals confirmed this week'] },
+  { store:'Lidl', items:['No BOGO deals confirmed — see the Thanksgiving basket instead'] },
   { store:'Aldi', items:['No BOGO-style promotions — Aldi runs everyday-low-price on meat and produce instead'] },
-  { store:'Piggly Wiggly', items:['No BOGO deals confirmed — multi-buys instead (see highlights)'] },
+  { store:'Piggly Wiggly', items:['This week’s ad wasn’t available from public sources'] },
 ];
 
 // Seasonal / monthly (curated separately from the weekly ad cycle)
 const seasonal = [
-  { title:'Hold the big Thanksgiving shop', text:'Lidl’s Thanksgiving dinner for 10 (~$36 with Lidl Plus) starts Nov 11, and turkey and baking sales usually get deeper the week before the holiday.' },
-  { title:'Stock up on baking staples now', text:'Flour, sugar, butter, broth and canned pumpkin go on sale all November. Buy shelf-stable items early while BOGOs run.' },
-  { title:'Fall produce is in season', text:'Apples, pears, sweet potatoes and winter squash are at their best prices of the year through November.' },
-  { title:'Freezer-stock reminder', text:'The Publix chicken-breast BOGO and Aldi’s $1.99/lb chicken are a good chance to buy extra and freeze before the holidays.' },
+  { title:'Thanksgiving for 10 under $40', text:'Lidl (~$36, Nov 11–25, Lidl Plus app) and Aldi (under $39, through Nov 25) both have full meal baskets — Lidl will match Aldi’s price.' },
+  { title:'Buy shelf-stable now, fresh next week', text:'Cranberries, broth, stuffing and baking staples are on sale now. Fresh turkeys and produce usually hit their lowest prices the week before Thanksgiving.' },
+  { title:'Fall produce is in season', text:'Sweet potatoes, apples, cranberries and winter squash are at their best prices of the year through November.' },
+  { title:'Freezer-stock reminder', text:'Chicken breast at $1.69/lb (Aldi) is a good chance to buy extra and freeze before holiday prices kick in.' },
 ];
 
 // ============ RENDER ============
